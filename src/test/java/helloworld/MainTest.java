@@ -1,5 +1,6 @@
 package helloworld;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
@@ -10,7 +11,7 @@ class MainTest {
         Main m = new Main();
         String expected = "Hello World!";
         String actual = m.getString();
-        assertEquals(expected, actual);
+        assertThat(expected).isEqualToIgnoringCase(actual);
 
 
     }
